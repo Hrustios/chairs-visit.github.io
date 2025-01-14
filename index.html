@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Chairs</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="description" content="Каталог тканевых и кожаных игровых кресел с удобной навигацией и полезной информацией.">
+    <meta name="keywords" content="игровые кресла, тканевые кресла, кожаные кресла, купить кресло">
+    <meta name="author" content="Андрей Куликов">
+    <title>Игровые кресла</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Навигационный бар -->
     <header class="header">
-        <div class="container">
-            <h1>Game Chairs</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+        <div class="header__container">
+            <h1 class="header__title">Игровые кресла</h1>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="#catalog" class="nav__link">Каталог</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Главный раздел -->
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Лучшие игровые кресла для геймеров</h2>
-            <p>Мы предлагаем широкий ассортимент игровых кресел из ткани и кожи.</p>
-            <img src="{% static 'images/chair1.jpg' %}" alt="Тканевое кресло">
-            <img src="{% static 'images/chair2.jpg' %}" alt="Кожаное кресло">
-        </div>
-    </section>
-
-    <!-- Раздел каталога -->
-    <section id="catalog" class="products">
-        <div class="container">
-            <h2>Наш каталог</h2>
-            <div class="product-item">
-                <img src="{% static 'images/chair1.jpg' %}" alt="Тканевое кресло">
-                <h3>Тканевое кресло</h3>
-                <p>Описание продукта...</p>
-                <p>Цена: $99.99</p>
+    <main class="main">
+        <!-- Главная страница -->
+        <section id="home" class="home">
+            <div class="home__content">
+                <h2>Добро пожаловать!</h2>
+                <p>Мы предлагаем лучшие игровые кресла для вашего комфорта и здоровья.</p>
             </div>
-            <div class="product-item">
-                <img src="{% static 'images/chair2.jpg' %}" alt="Кожаное кресло">
-                <h3>Кожаное кресло</h3>
-                <p>Описание продукта...</p>
-                <p>Цена: $149.99</p>
+        </section>
+
+        <!-- Галерея -->
+        <section id="gallery" class="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery_container">
+                <img src="pictures/chair1.jpeg" alt="Кресло 1" >
+                <img src="pictures/chair2.jpeg" alt="Кресло 2" >
+                <img src="pictures/chair3.jpeg" alt="Кресло 3" >
+                <img src="pictures/chair4.jpeg" alt="Кресло 4" >
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Раздел "О нас" -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>О нас</h2>
-            <p>Мы компания, специализирующаяся на производстве и продаже игровых кресел. Наши кресла обеспечивают комфорт и стиль для всех геймеров.</p>
-            <img src="{% static 'images/team.jpg' %}" alt="Наша команда">
-        </div>
-    </section>
+        <!-- О материалах -->
+        <section id="materials" class="materials">
+            <h2>Лучшие материалы</h2>
+            <p>Наши кресла изготовлены из лучших материалов, обеспечивая долговечность и комфорт. Мы используем только экологически чистые и безопасные для здоровья компоненты.</p>
+        </section>
 
-    <!-- Раздел контактов -->
-    <section id="contact" class="contact-form">
-        <div class="container">
-            <h2>Свяжитесь с нами</h2>
-            <form method="post" action="{% url 'send_email' %}">
-                {% csrf_token %}
-                <label for="question">Ваш вопрос:</label>
-                <textarea id="question" name="question" required></textarea>
+        <!-- Отзывы -->
+        <section id="reviews" class="reviews">
+            <h2>Отзывы клиентов</h2>
+            <div class="reviews__container">
+                <button class="reviews__arrow reviews__arrow--left">&#9664;</button>
+                <div class="reviews__wrapper">
+                    <!-- Карточки отзывов -->
+                    <div class="review">Отличное кресло! Очень удобное. — Алексей</div>
+                    <div class="review">Доставка быстрая, качество на высоте. — Мария</div>
+                    <div class="review">Покупал для офиса, все довольны. — Иван</div>
+                    <div class="review">Лучшее кресло, что у меня было! — Ольга</div>
+                    <!-- Добавьте ещё карточки отзывов -->
+                </div>
+                <button class="reviews__arrow reviews__arrow--right">&#9654;</button>
+            </div>
+        </section>
+
+        <!-- Каталог -->
+        <section id="catalog" class="catalog">
+            <h2>Каталог</h2>
+            <div class="catalog__filters">
+                <button class="filter__button" data-type="fabric">Тканевые</button>
+                <button class="filter__button" data-type="leather">Кожаные</button>
+            </div>
+            <div class="catalog__list">
+                <!-- Карточки товаров будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <!-- О компании -->
+        <section id="about" class="about">
+            <h2>О компании</h2>
+            <p>Мы специализируемся на продаже качественных игровых кресел и стремимся обеспечить максимальный комфорт для наших клиентов.</p>
+        </section>
+
+        <!-- Контакты -->
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <form class="contact__form">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" required></textarea>
+
                 <button type="submit">Отправить</button>
             </form>
-        </div>
-    </section>
+            <div class="contact__map">
+                <!-- Карта компании -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2023 Game Chairs. Все права защищены.</p>
-        </div>
+        <p>&copy; 2025 Игровые кресла. Все права защищены.</p>
     </footer>
 
-    <script>
-        $(document).ready(function() {
-            $('a[href^="#"]').on('click', function(event) {
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    event.preventDefault();
-                    $('html, body').stop().animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
