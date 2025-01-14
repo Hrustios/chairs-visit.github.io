@@ -12,16 +12,16 @@ body {
     padding: 1rem 0;
 }
 
-.header__container {
+.header_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 62.5%;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-.header__title {
+.header_title {
     color: #e94560;
     font-size: 1.8rem;
     margin: 0;
@@ -38,18 +38,18 @@ body {
     padding: 0;
 }
 
-.nav__item {
-    margin: 0 0.5rem;
+.nav_item {
+    margin: 0 5%;
 }
 
-.nav__link {
+.nav_link {
     color: #f0f0f0;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-.nav__link:hover {
+.nav_link:hover {
     color: #e94560;
 }
 
