@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 62.5%;
+    max-width: 75%;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -34,12 +34,12 @@ body {
 .nav__list {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    text-align: justify;
+    
 }
 
 .nav_item {
-    margin: 0 5%;
+    margin: 0 0.4rem;
 }
 
 .nav_link {
@@ -168,7 +168,7 @@ body {
     gap: 10px;
 }
 .gallery_container img{
-    width: 24.37%;
+    width: 24%;
     height: auto;
     cursor: pointer;
     border-radius: 5%;
