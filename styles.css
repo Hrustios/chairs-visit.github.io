@@ -141,7 +141,7 @@ body {
     gap: 10px;
 }
 .gallery_container img{
-    width: 22.8vw;
+    width: 22.8%;
     height: auto;
     cursor: pointer;
     border-radius: 5%;
@@ -156,13 +156,13 @@ body {
     text-align: center;
     vertical-align: middle;
     justify-items: center;
-    width: 10vw;
-    max-width: 10vw;
-    margin: 0 2%;
+    width: 10%;
+    max-width: 10%;
+    margin: 0 4% 0 0;
     border: solid rgb(18, 129, 129) ;
     text-shadow: #0f3479 4px 2px 3px;
     transition: 1200ms;
-    padding: 5%;
+    padding: 2% 5% 2% 5%;
     font-size: 2vw;
     min-height: 34vw;
 }
